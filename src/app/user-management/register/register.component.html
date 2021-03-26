@@ -1,0 +1,77 @@
+<div class="content-login">
+
+  <mat-card class="mat-card-flat">
+    <mat-card-content>
+      <div class="Header">
+        <h2> SIGN UP</h2>
+      </div>
+      <form (ngSubmit)="onLogin()" name="LoginForm" [formGroup]="loginForm" >
+        <div class="username sign">
+          <mat-form-field class="full-widht" >
+            <mat-label>Name</mat-label>
+            <input formControlName="name" matInput required/>
+            <mat-error *ngIf="!loginForm.controls['name'].valid">
+              Required name
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+        <div class="email-input ">
+          <mat-form-field class="full-widht" appearance="legacy">
+            <mat-label>Email</mat-label>
+            <input formControlName="email" matInput required/>
+            <mat-error *ngIf="!loginForm.controls['email'].valid">
+              Required email address
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+
+
+        <div class="password sign">
+          <mat-form-field class="full-widht" >
+            <mat-label>Password</mat-label>
+            <input formControlName="password" matInput [type]="!hideRegister ? 'password' : 'text'"  required/>
+
+            <button  mat-icon-button matSuffix (click)="hideRegister = !hideRegister" [attr.aria-label]="'Hide Password'"
+                     [attr.aria-pressed]="hideRegister">
+              <mat-icon>
+                {{hideRegister ? 'visibility' : 'visibility_off'}}
+
+              </mat-icon>
+            </button>
+            <mat-error *ngIf="loginForm.get('password').errors?.required">
+              Required password
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+        <div class="confirmPassword sign">
+          <mat-form-field class="full-widht" >
+            <mat-label>Confirm Password</mat-label>
+            <input formControlName="confirmPassword" matInput [type]="!hideRegister ? 'password' : 'text'"  required/>
+
+            <button  mat-icon-button matSuffix (click)="hideRegister= !hideRegister" [attr.aria-label]="'Hide Password'"
+                     [attr.aria-pressed]="hideRegister">
+              <mat-icon>
+                {{hideRegister ? 'visibility' : 'visibility_off'}}
+              </mat-icon>
+            </button>
+            <mat-error *ngIf="loginForm.get('confirmPassword').errors?.required">
+              Required password
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+        <div class="signbutton">
+          <button mat-raised-button  color="warn">sign up</button>
+        </div>
+
+      </form>
+
+      <div class="message" style="padding-top: 20px" *ngIf="message">{{message}}</div>
+    </mat-card-content>
+  </mat-card>
+
+
+</div>

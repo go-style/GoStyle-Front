@@ -1,0 +1,58 @@
+.content-login{
+  color: gray;
+  height: 100%;
+  max-height:fit-content;
+  background: linear-gradient(0deg, rgba(236,82,39,1) 0%, rgba(248,190,173,1) 13%, rgba(255,255,255,1) 45%);
+  display: block;
+;
+}
+mat-card{
+  margin-top: 40px;
+  background: none;
+  max-width: 100%;
+  color: gray;
+  text-align: center;
+
+}
+
+.full-widht{
+  width: 80%;
+}
+
+
+
+.email-input{
+  padding-top: 10px;
+}
+
+.alink{
+  float: right;
+  padding-right: 60px;
+  text-decoration: none;
+}
+
+mat-label{
+  margin-left: 10px;
+  color: grey;
+}
+
+.test{
+  border-radius: 15px  ;
+  border: 1px solid #f83808;
+  elevation: higher;
+}
+
+.sign{
+  padding-top: 10px;
+}
+
+.signbutton{
+  padding-top: 50px;
+}
+
+mat-form-field{
+
+  border-radius: 15px  ;
+  border: 1px solid #f83808;
+  background-color: #f6f6f6;
+}

@@ -1,0 +1,25 @@
+mat-card{
+  background: none;
+  color: black;
+  padding-top: 50px;
+  padding-bottom: 0;
+}
+
+footer{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  ;
+}
+
+.frontpageContent{
+  min-height: 100%;
+
+  background: radial-gradient(circle, rgba(249,249,249,1) 0%, rgba(244,244,244,1) 49%, rgba(252,135,70,1) 100%);
+}
+
+
+
+

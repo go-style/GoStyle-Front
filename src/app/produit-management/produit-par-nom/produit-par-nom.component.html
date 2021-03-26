@@ -1,0 +1,33 @@
+<div class="veuillez">
+  <h3 style="text-align: center"> <b> Veuillez saisir l'article qui vous cherchez </b></h3>
+</div>
+<div class="button-row" >
+  <input type="text" #saisieNom>
+  <button mat-raised-button color="primary" (click)="rechercherProd(saisieNom.value)" flex="50">Rechercher</button>
+</div>
+<div *ngIf="messageErreur">
+  {{messageErreur}}
+</div>
+
+<div class="content">
+  <div fxLayout="row wrap" fxLayoutGap="16px grid">
+    <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let pp of produitTab">
+      <mat-card class="mat-elevation-z4" >
+        <mat-card-header>
+          <mat-card-title class="titleProd"> {{pp.nom}}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src="{{pp.photourl}}">
+        <mat-card-content>
+          <p>
+            <b style="color: aquamarine"> Description : </b> {{ pp.description}}
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button class="buttonColor" mat-button >Ajouter</button>
+          <span> Prix : </span>
+          <span>{{pp.prix}} €</span>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>

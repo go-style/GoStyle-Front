@@ -1,0 +1,30 @@
+p {
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+
+.buttonColor {
+  background-color : darkblue;
+}
+
+.titleProd {
+  text-align: center;
+}
+
+.button-row{
+  display: flex;
+  align-content: center;
+  align-items: center;
+  layout : row;
+  layout-align : center center;
+  margin-left: 50px;
+  margin-bottom: 10px;
+}
+
+.veuillez {
+  text-align: center;
+  color : gray;
+  width: 100%;
+
+}

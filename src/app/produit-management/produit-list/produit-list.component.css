@@ -1,0 +1,21 @@
+.button-row{
+  display: flex;
+  align-content: center;
+  align-items: center;
+  layout : row;
+  layout-align : center center;
+  margin-left: 50px;
+  margin-bottom: 10px;
+}
+
+.buttonColor {
+  background-color : darkblue;
+}
+.backgroundcolor {
+  background: linear-gradient(90deg, rgba(255,173,128,1) 0%, rgba(244,244,244,1) 35%, rgba(244,244,244,1) 65%, rgba(255,173,128,1) 100%);
+   min-height: 100%;
+   max-height: max-content;
+   background-size: auto;
+ }
+
+

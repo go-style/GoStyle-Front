@@ -1,0 +1,59 @@
+<div class="content-login">
+
+  <mat-card class="mat-card-flat">
+    <mat-card-content>
+      <div class="Header" >
+        <h2> LOGIN </h2>
+      </div>
+      <form (ngSubmit)="onLogin()" name="LoginForm" [formGroup]="loginForm" >
+        <div class="email-input sign">
+          <mat-form-field class="full-widht" >
+            <mat-label>Email</mat-label>
+            <input formControlName="email" matInput required/>
+            <mat-error *ngIf="!loginForm.controls['email'].valid">
+              Required email address
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="sign">
+          <mat-form-field class="full-widht" >
+            <mat-label>Password</mat-label>
+            <input formControlName="password" matInput [type]="!hide ? 'password' : 'text'"  required/>
+            <mat-error *ngIf="!loginForm.controls['password'].valid">
+              Required email address
+            </mat-error>
+
+            <button  mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide Password'"
+                     [attr.aria-pressed]="hide">
+              <mat-icon>
+                {{hide ? 'visibility' : 'visibility_off'}}
+              </mat-icon>
+            </button>
+
+            <mat-error *ngIf="loginForm.get('password').errors?.required">
+              Required password
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+        <div *ngIf="!foundUser">
+          <div class="signbutton">
+            <button mat-raised-button  color="warn">login</button>
+          </div>
+
+          <div class="toconnecxion" style="padding-top: 20px">
+            <p>Pas encore tout à fait stylé?</p> <a routerLink="/register"> Rejoins-nous !</a>
+          </div>
+        </div>
+
+        <div style="padding-top: 20px" *ngIf="foundUser">
+          <h2>Bienvenue {{foundUser.username}} : )</h2>
+          <button mat-raised-button routerLink="/welcome" color="warn">WELCOME !</button>
+        </div>
+
+      </form>
+    </mat-card-content>
+  </mat-card>
+
+
+</div>

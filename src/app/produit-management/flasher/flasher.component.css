@@ -1,0 +1,25 @@
+.center {
+  color: grey;
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.small {
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  height: auto;
+}
+html {
+  background: linear-gradient(90deg, rgba(255,173,128,1) 0%, rgba(244,244,244,1) 35%, rgba(244,244,244,1) 65%, rgba(255,173,128,1) 100%);
+}
+
+.lecteur {
+  margin-top: 50px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+}
